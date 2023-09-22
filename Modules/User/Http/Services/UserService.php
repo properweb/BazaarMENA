@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
-use Modules\User\Entities\Category;
-use Modules\User\Entities\Country;
-use Modules\User\Entities\State;
-use Modules\User\Entities\City;
 use Modules\User\Entities\User;
 use Carbon\Carbon;
 

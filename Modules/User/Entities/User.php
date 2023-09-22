@@ -5,12 +5,13 @@ namespace Modules\User\Entities;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-//use Laravel\Passport\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
+use Modules\Product\Entities\Product;
 
 
 class User extends Authenticatable
 {
-    //use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     const ROLE_BRAND = 'brand';
     const ROLE_RETAILER = 'retailer';
