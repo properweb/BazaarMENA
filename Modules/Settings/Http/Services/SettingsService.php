@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
-use Modules\User\Entities\Category;
-use Modules\User\Entities\Country;
-use Modules\User\Entities\State;
-use Modules\User\Entities\City;
+use Modules\Settings\Entities\Shipping;
 use Modules\User\Entities\User;
+
 use Carbon\Carbon;
 
 
@@ -75,6 +73,84 @@ class SettingsService
             $responce = ['res' => false, 'msg' => "Didn't get user!", 'data' => ''];
         }
         return $responce;
+    }
+
+    /**
+     * Update User
+     *
+     * @param array $requestData
+     * @return array
+     */
+    public function updateCompanyProfileInfo(array $requestData): array
+    {
+        $user = auth()->user();
+        // Find the user by ID
+        $user = User::find($user->id);
+        if ($user) {
+            // Update the user's attributes
+            $user->industry = $requestData['industry'];
+            $user->address = $requestData['address'];
+
+            if (isset($requestData['letter_of_incorporation']) && !filter_var($requestData['letter_of_incorporation'], FILTER_VALIDATE_URL)) {
+                $user->letter_of_incorporation = $this->uploadFile($user->id,$requestData['letter_of_incorporation'],'letter_of_incorporation',$user->letter_of_incorporation,true);
+            }
+
+            if (isset($requestData['identity_card']) && !filter_var($requestData['identity_card'], FILTER_VALIDATE_URL)) {
+                $user->identity_card = $this->uploadFile($user->id,$requestData['identity_card'],'identity_card',$user->identity_card,true);
+            }
+
+            $user->industry = $requestData['industry'];
+            $user->category_id = $requestData['category_id'];
+            // Save the changes to the database
+            $user->save();
+            $responce = ['res' => true, 'msg' => "Successfully updated company profile", 'data' => ''];
+        }else{
+            $responce = ['res' => false, 'msg' => "Didn't get user!", 'data' => ''];
+        }
+        return $responce;
+    }
+
+    /**
+     * Update User
+     *
+     * @param array $requestData
+     * @return array
+     */
+    public function shippingUpdateOrCreate(array $requestData): array
+    {
+        $user = auth()->user();
+        Shipping::updateOrCreate(['user_id' => $user->id], $requestData);
+        return ['res' => true, 'msg' => "Successfully updated your shipping", 'data' => ''];
+    }
+
+    /**
+     * Save image from base64 string.
+     *
+     * @param int $id
+     * @param $file
+     * @param $field_name
+     * @param $previousFile
+     * @param $replaceable
+     * @return Stringable|string
+     */
+    private function uploadFile(int $id, $file, $field_name, $previousFile, $replaceable): Stringable|string
+    {
+        $userAbsPath = $this->userAbsPath.'/'.$id. "/";
+        $userRelPath = $this->userRelPath.$id.'/';
+
+        if (!file_exists($userAbsPath)) {
+            mkdir($userAbsPath, 0777, true);
+        }
+
+        if ($replaceable && $previousFile !== null && file_exists(public_path()."/". $previousFile)) {
+            $unlinkUrl = public_path() ."/". $previousFile;
+            if (file_exists($unlinkUrl)) {
+                unlink($unlinkUrl);
+            }
+        }
+        $fileName = Str::random(10) . '_'.$field_name.'.' . $file->extension();
+        $file->move($userAbsPath, $fileName);
+        return $userRelPath . $fileName;
     }
 
 }

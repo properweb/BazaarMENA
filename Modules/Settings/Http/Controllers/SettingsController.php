@@ -9,6 +9,8 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Http\JsonResponse;
 use Modules\Settings\Http\Requests\ChangePasswordRequest;
 use Modules\Settings\Http\Requests\UpdateAccountInfoRequest;
+use Modules\Settings\Http\Requests\UpdateCompanyProfileInfoRequest;
+use Modules\Settings\Http\Requests\ShippingUpdateOrCreateInfoRequest;
 use Modules\Settings\Http\Services\SettingsService;
 
 class SettingsController extends Controller
@@ -55,6 +57,29 @@ class SettingsController extends Controller
     public function updateInfo(UpdateAccountInfoRequest $request): JsonResponse
     {
         $response = $this->settingsService->updateInfo($request->validated());
+        return response()->json($response);
+    }
+    /**
+     * Update info.
+     *
+     * @param UpdateCompanyProfileInfoRequest $request
+     * return JsonResponse
+     */
+    public function updateCompanyProfileInfo(UpdateCompanyProfileInfoRequest $request): JsonResponse
+    {
+        $response = $this->settingsService->updateCompanyProfileInfo($request->validated());
+        return response()->json($response);
+    }
+
+    /**
+     * Update Or Create shipping.
+     *
+     * @param ShippingUpdateOrCreateInfoRequest $request
+     * return JsonResponse
+     */
+    public function shippingUpdateOrCreate(ShippingUpdateOrCreateInfoRequest $request): JsonResponse
+    {
+        $response = $this->settingsService->shippingUpdateOrCreate($request->validated());
         return response()->json($response);
     }
 }

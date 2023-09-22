@@ -20,4 +20,5 @@ Route::middleware('auth:api')
         Route::post('/update/change-password', 'SettingsController@changePassword')->name('changePassword');
         Route::post('/update/info', 'SettingsController@updateInfo')->name('updateInfo');
         Route::post('/update/company-profile-info', 'SettingsController@updateCompanyProfileInfo')->name('updateCompanyProfileInfo');
+        Route::post('/update/shipping-update-or-create', 'SettingsController@shippingUpdateOrCreate')->name('shippingUpdateOrCreate');
     });
