@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Modules\Settings\Entities\Shipping;
+use Modules\Settings\Entities\PaymentTerms;
 use Modules\User\Entities\User;
 
 use Carbon\Carbon;
@@ -121,6 +122,32 @@ class SettingsService
         $user = auth()->user();
         Shipping::updateOrCreate(['user_id' => $user->id], $requestData);
         return ['res' => true, 'msg' => "Successfully updated your shipping", 'data' => ''];
+    }
+
+    /**
+     * Update User
+     *
+     * @param array $requestData
+     * @return array
+     */
+    public function paymentTermsRequest(array $requestData): array
+    {
+        $user = auth()->user();
+        PaymentTerms::updateOrCreate(['user_id' => $user->id], $requestData);
+        return ['res' => true, 'msg' => "Successfully Update Payment Terms.", 'data' => ''];
+    }
+
+    /**
+     * Update User
+     *
+     * @param array $requestData
+     * @return array
+     */
+    public function minOrder(array $requestData): array
+    {
+        $user = auth()->user();
+        PaymentTerms::updateOrCreate(['user_id' => $user->id], $requestData);
+        return ['res' => true, 'msg' => "Successfully Update Minimum Quantity.", 'data' => ''];
     }
 
     /**

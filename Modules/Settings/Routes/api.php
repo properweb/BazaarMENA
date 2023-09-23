@@ -21,4 +21,6 @@ Route::middleware('auth:api')
         Route::post('/update/info', 'SettingsController@updateInfo')->name('updateInfo');
         Route::post('/update/company-profile-info', 'SettingsController@updateCompanyProfileInfo')->name('updateCompanyProfileInfo');
         Route::post('/update/shipping-update-or-create', 'SettingsController@shippingUpdateOrCreate')->name('shippingUpdateOrCreate');
+        Route::post('/update/payment-terms-request', 'SettingsController@paymentTermsRequest')->name('paymentTermsRequest');
+        Route::post('/update/min-order', 'SettingsController@minOrder')->name('minOrder');
     });

@@ -11,6 +11,8 @@ use Modules\Settings\Http\Requests\ChangePasswordRequest;
 use Modules\Settings\Http\Requests\UpdateAccountInfoRequest;
 use Modules\Settings\Http\Requests\UpdateCompanyProfileInfoRequest;
 use Modules\Settings\Http\Requests\ShippingUpdateOrCreateInfoRequest;
+use Modules\Settings\Http\Requests\PaymentTermsRequest;
+use Modules\Settings\Http\Requests\MinminOrderRequest;
 use Modules\Settings\Http\Services\SettingsService;
 
 class SettingsController extends Controller
@@ -80,6 +82,29 @@ class SettingsController extends Controller
     public function shippingUpdateOrCreate(ShippingUpdateOrCreateInfoRequest $request): JsonResponse
     {
         $response = $this->settingsService->shippingUpdateOrCreate($request->validated());
+        return response()->json($response);
+    }
+    /**
+     * Update Or Create shipping.
+     *
+     * @param PaymentTermsRequest $request
+     * return JsonResponse
+     */
+    public function paymentTermsRequest(PaymentTermsRequest $request): JsonResponse
+    {
+        $response = $this->settingsService->paymentTermsRequest($request->validated());
+        return response()->json($response);
+    }
+
+    /**
+     * Update Or Create shipping.
+     *
+     * @param MinminOrderRequest $request
+     * return JsonResponse
+     */
+    public function minOrder(MinminOrderRequest $request): JsonResponse
+    {
+        $response = $this->settingsService->minOrder($request->validated());
         return response()->json($response);
     }
 }

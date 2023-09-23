@@ -7,7 +7,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\JsonResponse;
 
-class ShippingUpdateOrCreateInfoRequest extends FormRequest
+class PaymentTermsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,19 +27,10 @@ class ShippingUpdateOrCreateInfoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'address' => 'required|string',
-            'country' => 'required|integer',
-            'street' => 'nullable|string|max:255',
-            'suite' => 'nullable|string|max:255',
-            'state' => 'required|integer',
-            'city' => 'required|integer',
-            'zip' => 'required|integer',
-            'country_code' => 'nullable|integer',
-            'phone' => 'nullable|integer|min:9',
-            'delivery_time_for_locations' => 'nullable|string|max:255',
-            'delivery_fees' => 'nullable|string|max:255',
-            'pickup' => 'nullable|integer',
-            'delivery' => 'nullable|string|max:255',
+            'accept_terms' => 'nullable|integer',
+            'wire_transfer' => 'required|string',
+            'payment_mode' => 'required|string|max:255',
+            'internal_agreed_terms' => 'nullable|string'
         ];
     }
 
