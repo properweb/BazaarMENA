@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f34ff9d4-61f7-441f-a274-9c0291c806f5" name="BazarMena" url="http://staging.bazarcenter.ca">
+        <fileTransfer rootFolder="/public_html/staging.bazarcenter.ca/bazarmena" host="staging.bazarcenter.ca" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
