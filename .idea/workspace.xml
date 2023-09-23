@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d993e0ea-a5f4-4847-9b82-5d327656c9ac" name="Changes" comment="Settings Module Upload">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d993e0ea-a5f4-4847-9b82-5d327656c9ac" name="Changes" comment="User Module Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695365563237</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="User Module Update">
+      <created>1695445759591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695445759591</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +323,7 @@
     <MESSAGE value="User Module Upload" />
     <MESSAGE value="Global Selection Module Upload" />
     <MESSAGE value="Settings Module Upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Settings Module Upload" />
+    <MESSAGE value="User Module Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Module Update" />
   </component>
 </project>
