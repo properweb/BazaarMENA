@@ -47,7 +47,12 @@ class RegistrationRequest extends FormRequest
             'city_id' => 'required|numeric',
             'state_id' => 'required|numeric',
             'zip' => 'required|string|max:10',
-            'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+            'phone_number' => [
+                'required',
+                'numeric',
+                'digits_between:9,15', // Adjust the minimum and maximum digits as needed
+                'regex:/^\+?[0-9]*$/' // Allows digits and an optional plus sign
+            ],
             'country_code' => 'required|numeric',
             'logo' => 'nullable|mimes:jpeg,jpg,png',
             'letter_of_incorporation' => 'required|mimes:doc,docx,pdf',
