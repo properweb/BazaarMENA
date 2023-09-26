@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('user')
     ->name('user.')
     ->group(function () {
+        Route::post('/send-email', 'UserController@sendEmail')->name('sendEmail');
         Route::post('/sign-up', 'UserController@signUp')->name('signUp');
         Route::post('/login', 'UserController@login')->name('login');
     });

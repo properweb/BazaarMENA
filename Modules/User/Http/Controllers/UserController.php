@@ -11,6 +11,9 @@ use Modules\User\Http\Requests\RegistrationRequest;
 use Modules\User\Http\Requests\LoginUserRequest;
 use Modules\User\Http\Requests\ResetPasswordRequest;
 use Modules\User\Http\Services\UserService;
+use App\Mail\VerificationMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class UserController extends Controller
 {
@@ -32,9 +35,59 @@ class UserController extends Controller
      */
     public function index()
     {
+
         return view('user::index');
     }
+    /**
+     * Store a newly created brand in storage
+     *
+     */
+    public function sendEmail()
+    {
+        $content = [
+            'subject' => 'This is the mail subject',
+            'body' => 'This is the email body of how to send email from laravel 10 with mailtrap.'
+        ];
 
+        Mail::to('saha.atanu1984@gmail.com')->send(new VerificationMail($content));
+
+        return "Email has been sent.";
+
+//        $to = 'jahangir@properbounce.com';
+//
+//        // Subject of the email
+//        $subject = 'Test Email';
+//
+//        // Message body
+//        $message = 'This is a test email sent from Laravel using custom headers.';
+//
+//        // Additional headers
+//        $headers = [
+//            'From' => 'info@bazarcenter.ca',
+//            'Reply-To' => 'sender@example.com',
+//            'CC' => 'cc@example.com',
+//            'BCC' => 'bcc@example.com',
+//            'MIME-Version' => '1.0',
+//            'Content-type' => 'text/html; charset=iso-8859-1',
+//        ];
+//
+//        // Construct headers as a string
+//        $headersString = '';
+//        foreach ($headers as $key => $value) {
+//            $headersString .= $key . ': ' . $value . "\r\n";
+//        }
+//
+//        // Send the email using the mail() function
+//        $mailSent = mail($to, $subject, $message, $headersString);
+//
+//        if ($mailSent) {
+//            return 'Email sent successfully using custom function!';
+//        } else {
+//            return 'Email delivery failed.';
+//        }
+
+
+    }
     /**
      * Store a newly created brand in storage
      *

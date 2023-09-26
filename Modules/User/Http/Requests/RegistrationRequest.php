@@ -6,8 +6,8 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rules\Password;
+use App\Rules\DisallowedEmailDomains;
 use Illuminate\Http\JsonResponse;
-
 class RegistrationRequest extends FormRequest
 {
     /**
@@ -30,7 +30,8 @@ class RegistrationRequest extends FormRequest
         return [
             'first_name' => 'required|regex:/^[a-zA-Z]+$/u|max:255',
             'last_name' => 'required|regex:/^[a-zA-Z ]+$/u|max:255',
-            'email' => 'required|email|max:255|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix|unique:users,email',
+            //'email' => 'required|email|max:255|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix|unique:users,email',
+            'email' => ['required', 'email', 'max:255', 'unique:users,email', new DisallowedEmailDomains],
             'password' => [
                 'required',
                 Password::min(8)
@@ -46,7 +47,6 @@ class RegistrationRequest extends FormRequest
             'country_id' => 'required|numeric',
             'city_id' => 'required|numeric',
             'state_id' => 'required|numeric',
-            'zip' => 'required|string|max:10',
             'phone_number' => [
                 'required',
                 'numeric',
@@ -55,10 +55,8 @@ class RegistrationRequest extends FormRequest
             ],
             'country_code' => 'required|numeric',
             'logo' => 'nullable|mimes:jpeg,jpg,png',
-            'letter_of_incorporation' => 'required|mimes:doc,docx,pdf',
-            'vat_number' => 'nullable|string',
-            'role' => 'required|string',
-            //'website_url' => ['required','regex:/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/'],
+            'business_registration_document' => 'required|mimes:doc,docx,pdf',
+            'role' => 'required|string'
         ];
     }
 

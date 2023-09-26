@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d993e0ea-a5f4-4847-9b82-5d327656c9ac" name="Changes" comment="User Module" />
+    <list default="true" id="d993e0ea-a5f4-4847-9b82-5d327656c9ac" name="Changes" comment="Global Selection Module Update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Database/Seeders/UserDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Database/Seeders/UserDatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Entities/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Http/Requests/LoginUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Http/Requests/LoginUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Http/Requests/RegistrationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Http/Requests/RegistrationRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Http/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Http/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Policies/UserPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Providers/UserServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Providers/UserServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/module.json" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/module.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/vite.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +38,7 @@
       <option value="$PROJECT_DIR$/Modules/Product/composer.json" />
     </option>
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -27,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/vendor_registration_login" />
+        <entry key="$PROJECT_DIR$" value="feature/global_selection" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,6 +184,26 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
     </include_path>
   </component>
   <component name="ProjectId" id="2VhG5ZVG0mg8XiEu28hWfAShHxX" />
@@ -204,7 +244,11 @@
       <updated>1695280718156</updated>
       <workItem from="1695280719259" duration="925000" />
       <workItem from="1695281686336" duration="17111000" />
-      <workItem from="1695362330668" duration="1116000" />
+      <workItem from="1695362330668" duration="19753000" />
+      <workItem from="1695463301278" duration="937000" />
+      <workItem from="1695618755191" duration="15688000" />
+      <workItem from="1695713576702" duration="7400000" />
+      <workItem from="1695726353586" duration="4568000" />
     </task>
     <task id="LOCAL-00001" summary="update Password">
       <created>1695293219258</created>
@@ -255,7 +299,70 @@
       <option name="project" value="LOCAL" />
       <updated>1695363446163</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="User Module Upload">
+      <created>1695363551910</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695363551910</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Global Selection Module Upload">
+      <created>1695365000070</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695365000070</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Global Selection Module Upload">
+      <created>1695365063520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695365063520</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Settings Module Upload">
+      <created>1695365476318</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695365476318</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Settings Module Upload">
+      <created>1695365563237</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695365563237</updated>
+    </task>
+    <task id="LOCAL-00013" summary="User Module Update">
+      <created>1695445759591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695445759591</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Settings Module Update">
+      <created>1695463525677</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695463525677</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Settings Module Update">
+      <created>1695735168801</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1695735168801</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Global Selection Module Update">
+      <created>1695735261220</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695735261220</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +385,12 @@
     <MESSAGE value="Product Module" />
     <MESSAGE value="Product Module Deployment" />
     <MESSAGE value="User Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Module" />
+    <MESSAGE value="User Module Upload" />
+    <MESSAGE value="Global Selection Module Upload" />
+    <MESSAGE value="Settings Module Upload" />
+    <MESSAGE value="User Module Update" />
+    <MESSAGE value="Settings Module Update" />
+    <MESSAGE value="Global Selection Module Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Global Selection Module Update" />
   </component>
 </project>

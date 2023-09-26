@@ -51,7 +51,7 @@ class UserService
             if ($requestData['letter_of_incorporation']) {
                 $userData = array();
                 $file = $requestData['letter_of_incorporation'];
-                $fileName = Str::random(10) . '_letter_of_incorporation.' . $file->extension();
+                $fileName = Str::random(10) . '_business_registration_document.' . $file->extension();
                 $file->move($userAbsPath, $fileName);
                 $userData['letter_of_incorporation'] = $userRelPath . $fileName;
                 $userData['id'] = $user->id;
