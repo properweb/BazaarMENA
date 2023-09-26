@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d993e0ea-a5f4-4847-9b82-5d327656c9ac" name="Changes" comment="Settings Module Update">
-      <change beforePath="$PROJECT_DIR$/Modules/Settings/Config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Settings/Config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +21,7 @@
       <option value="$PROJECT_DIR$/Modules/Product/composer.json" />
     </option>
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -228,6 +229,9 @@
       <workItem from="1695281686336" duration="17111000" />
       <workItem from="1695362330668" duration="19753000" />
       <workItem from="1695463301278" duration="937000" />
+      <workItem from="1695618755191" duration="15688000" />
+      <workItem from="1695713576702" duration="7400000" />
+      <workItem from="1695726353586" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="update Password">
       <created>1695293219258</created>
