@@ -23,15 +23,44 @@ class SelectionController extends Controller
     {
         return view('selection::index');
     }
-
+    /**
+     * Get All Industries
+     *
+     * @return JsonResponse
+     */
+    public function getIndustries(): JsonResponse
+    {
+        $response = $this->selectionService->getIndustries();
+        return response()->json($response);
+    }
+    /**
+     * Get Industry By id
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function getIndustryById(int $id): JsonResponse
+    {
+        $response = $this->selectionService->getIndustryById($id);
+        return response()->json($response);
+    }
     /**
      * Get All Categories
      *
      * @return JsonResponse
      */
-    public function getCategory(): JsonResponse
+    public function getCategories(): JsonResponse
     {
-        $response = $this->selectionService->getCategory();
+        $response = $this->selectionService->getCategories();
+        return response()->json($response);
+    }
+    /**
+     * Get Category By id
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function getCategoryById(int $id): JsonResponse
+    {
+        $response = $this->selectionService->getCategoryById($id);
         return response()->json($response);
     }
     /**
@@ -99,4 +128,6 @@ class SelectionController extends Controller
         $response = $this->selectionService->getCityById($id);
         return response()->json($response);
     }
+
+
 }
