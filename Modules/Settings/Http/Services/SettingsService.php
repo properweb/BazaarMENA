@@ -30,7 +30,7 @@ class SettingsService
     }
 
     /**
-     * Update User
+     * Update Password
      *
      * @param array $requestData
      * @return array
